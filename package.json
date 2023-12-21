@@ -1,0 +1,20 @@
+{
+  "name": "moxfield-random",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit && cross-env NODE_ENV=production node ./esbuild.mjs && cd ./build && 7z a ./build.zip *",
+    "dev": "cross-env NODE_ENV=development node ./esbuild.mjs",
+    "watch": "npm run dev -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chrome": "^0.0.254",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.19.9",
+    "typescript": "^5.3.3"
+  }
+}

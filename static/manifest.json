@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Moxfield Random Card Option",
+  "description": "Creates a button on the Moxfield Playtest mode beneath \"Add Token\" that inserts a random card, weighted with EDHREC data.",
+  "version": "1.0.2",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.moxfield.com/*"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["injected.js"],
+    "matches": ["https://www.moxfield.com/*"]
+  }],
+  "background": {
+    "service_worker": "./background.js"
+  }
+}
